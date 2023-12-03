@@ -10,8 +10,6 @@ public class TalkButton : MonoBehaviour
     public GameObject Button1;
     public GameObject Button2;
     public GameObject Talk;
-    public GameObject TalkBox;
-    public GameObject TalkBnt;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +30,6 @@ public class TalkButton : MonoBehaviour
         Button1.SetActive(false);
         Button2.SetActive(false);
         Talk.SetActive(false);
-        TalkBox.SetActive(true);
-        TalkBnt.SetActive(true);
     }
 
 
@@ -44,8 +40,6 @@ public class TalkButton : MonoBehaviour
         Button1.SetActive(true);
         Button2.SetActive(true);
         Talk.SetActive(true);
-        TalkBox.SetActive(false);
-        TalkBnt.SetActive(false);
     }
 
 

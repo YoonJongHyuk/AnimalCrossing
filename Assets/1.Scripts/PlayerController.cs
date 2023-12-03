@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PlayerController : MonoBehaviour
     bool playerRight = true;
     bool moving = false;
     public Animator anim;
-    public GameObject Talk;
+    public Button Talk;
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +38,15 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Move", false);
         }
+
+
     }
 
     public void ButtonDown_Left()
     {
         playerRight = false;
         moving = true;
-        transform.localScale = new Vector3(-0.75f, 0.75f, 0.75f);
+        transform.localScale = new Vector3(-0.5f, 0.5f, 1f);
     }
 
     public void ButtonUp_Left()
@@ -56,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRight = true;
         moving = true;
-        transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+        transform.localScale = new Vector3(0.5f, 0.5f, 1f);
     }
 
     public void ButtonUp_Right()
@@ -64,20 +67,5 @@ public class PlayerController : MonoBehaviour
         moving = false;
     }
 
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "NPC")
-        {
-            Talk.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "NPC")
-        {
-            Talk.SetActive(false);
-        }
-    }
 
 }
