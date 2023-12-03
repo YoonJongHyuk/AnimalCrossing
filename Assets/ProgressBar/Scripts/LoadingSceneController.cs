@@ -6,15 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadingSceneController : MonoBehaviour
 {
-
-	static string nextScene;
-
 	[SerializeField]
 	Image progressBar;
 
 	public static void LoadScene(string sceneName)
 	{
-		nextScene = sceneName;
 		SceneManager.LoadScene("TestLoading");
 	}
 

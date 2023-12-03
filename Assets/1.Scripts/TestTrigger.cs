@@ -11,11 +11,11 @@ public class TestTrigger : MonoBehaviour
     {
         if (coll.tag == "Item")
         {
-            IObjectItem clickInterface = coll.transform.gameObject.GetComponent<IObjectItem>();
+            IObjectItem onTriggerItem = coll.transform.gameObject.GetComponent<IObjectItem>();
 
-            if (clickInterface != null)
+            if (onTriggerItem != null)
             {
-                Item item = clickInterface.OnTriggerItem();
+                Item item = onTriggerItem.OnTriggerItem();
                 print($"{item.itemName}");
                 inventory.AddItem(item);
 
