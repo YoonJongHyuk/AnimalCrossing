@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/ProgressBar/Scenes/TestLoading.unity
     guid: 125e843303325a74f99ea8abe72feb97
   - enabled: 1
-    path: Assets/0.Scenes/TownScene.unity
-    guid: 35d9e30f1ff9ae34cb1f1d924b6c759a
+    path: Assets/0.Scenes/TestNPCScene.unity
+    guid: 2c13fb15ae6a46c4a9c887d8009924e8
   m_configObjects: {}

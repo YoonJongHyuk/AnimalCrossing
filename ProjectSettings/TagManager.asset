@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tom
   - Item
+  - Soldier
   layers:
   - Default
   - TransparentFX

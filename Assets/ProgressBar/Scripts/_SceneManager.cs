@@ -10,14 +10,14 @@ public class _SceneManager : MonoBehaviour
 
 	public void LoadTownScene()
 	{
-		LoadScene(SceneName.TownScene);
+		LoadScene(SceneName.TestNPCScene);
 	}
 
 	public enum SceneName
 	{
 		TestLoading,
 		Test3MenuScene,
-		TownScene
+		TestNPCScene
 	}
 
 	public static SceneName sceneToLoad;

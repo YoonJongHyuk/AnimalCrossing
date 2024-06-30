@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Button Talk;
 
+    SpriteRenderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,15 +40,13 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Move", false);
         }
-
-
     }
 
     public void ButtonDown_Left()
     {
         playerRight = false;
         moving = true;
-        transform.localScale = new Vector3(-0.5f, 0.5f, 1f);
+        rend.flipX = true;
     }
 
     public void ButtonUp_Left()
@@ -54,18 +54,15 @@ public class PlayerController : MonoBehaviour
         moving = false;
     }
 
-
     public void ButtonDown_Right()
     {
         playerRight = true;
         moving = true;
-        transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+        rend.flipX = false;
     }
 
     public void ButtonUp_Right()
     {
         moving = false;
     }
-
-
 }
